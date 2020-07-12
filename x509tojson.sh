@@ -57,8 +57,8 @@ getCountry(){
 
 read -r -d '' JSON << EOM
 {
-  "label": "$(getCommonName $SUBJECT)"
-  "date": "$(date)"
+  "label": "$(getCommonName $SUBJECT)",
+  "date": "$(date)",
   "subject": {
     "raw": "$SUBJECT",
     "common_name": "$(getCommonName $SUBJECT)",
