@@ -1,0 +1,90 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            23:6e:43:6d:08:17:a9:8b:08:00:00:00:00:47:f0:50
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, O = Google Trust Services, CN = GTS CA 1O1
+        Validity
+            Not Before: Jun 17 14:32:13 2020 GMT
+            Not After : Sep  9 14:32:13 2020 GMT
+        Subject: C = US, ST = California, L = Mountain View, O = Google LLC, CN = *.google.at
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:a1:5d:1f:0f:d3:c3:5b:14:b7:51:7e:97:c7:54:
+                    a0:2f:69:6a:b8:73:59:69:6a:52:8f:69:82:3b:f6:
+                    0e:1b:df:9f:0d:8f:c2:c8:0f:f7:30:5c:f8:b1:7e:
+                    6f:61:bd:96:56:ce:03:9d:d8:61:8f:d3:38:1d:35:
+                    ce:ec:87:50:b0
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                ED:33:64:97:91:79:6A:9A:6A:AF:20:E7:B9:A5:69:9C:29:3E:2B:03
+            X509v3 Authority Key Identifier: 
+                keyid:98:D1:F8:6E:10:EB:CF:9B:EC:60:9F:18:90:1B:A0:EB:7D:09:FD:2B
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.pki.goog/gts1o1core
+                CA Issuers - URI:http://pki.goog/gsr2/GTS1O1.crt
+
+            X509v3 Subject Alternative Name: 
+                DNS:*.google.at, DNS:google.at
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.2
+                Policy: 1.3.6.1.4.1.11129.2.5.3
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.pki.goog/GTS1O1core.crl
+
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 5E:A7:73:F9:DF:56:C0:E7:B5:36:48:7D:D0:49:E0:32:
+                                7A:91:9A:0C:84:A1:12:12:84:18:75:96:81:71:45:58
+                    Timestamp : Jun 17 15:32:14.504 2020 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:F5:1E:CA:07:51:93:AE:92:60:7F:11:
+                                91:65:9B:EC:3A:FE:37:6F:5A:D0:E5:48:8A:E8:F1:96:
+                                52:ED:B3:73:E4:02:20:34:4F:C2:45:9F:AB:63:83:3F:
+                                9F:89:15:69:59:CD:DC:FD:49:A6:F6:13:FA:D1:32:5E:
+                                91:68:1A:BE:22:FC:9E
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 07:B7:5C:1B:E5:7D:68:FF:F1:B0:C6:1D:23:15:C7:BA:
+                                E6:57:7C:57:94:B7:6A:EE:BC:61:3A:1A:69:D3:A2:1C
+                    Timestamp : Jun 17 15:32:14.502 2020 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:82:B3:5D:C5:F1:91:FB:E4:51:AA:1D:
+                                BF:C8:AB:B8:27:18:48:68:50:F0:7A:D0:7A:E4:5C:04:
+                                DA:86:05:F7:DC:02:21:00:BC:79:BB:5E:DF:F2:70:84:
+                                1C:7B:DC:6F:B0:DF:04:ED:B4:EC:0F:6F:3C:DA:CE:83:
+                                71:12:FB:A7:54:A2:02:67
+    Signature Algorithm: sha256WithRSAEncryption
+         aa:42:a2:73:d4:af:f0:2d:e8:a7:a3:3a:46:b7:ab:ae:0b:89:
+         7a:60:b6:0a:3f:11:66:13:b2:4f:7f:3b:10:4d:fe:ef:b1:fe:
+         f1:c9:70:f9:ad:78:0a:4c:3e:38:d2:f8:4e:06:1e:70:d7:2b:
+         56:83:53:06:df:60:f2:17:b3:67:00:88:a6:6b:b3:67:d7:52:
+         db:a9:54:21:4c:49:99:bf:85:02:8c:ad:73:7e:5c:b4:53:f2:
+         03:f4:a3:26:e6:e1:c1:0e:25:61:8c:88:ea:62:d8:98:1e:05:
+         4b:ec:4f:f5:ed:8e:0c:7a:f4:5a:34:92:64:91:6e:fc:b8:0f:
+         7c:2b:22:49:0a:df:42:e7:f2:6c:9a:01:fb:16:6e:2b:42:02:
+         9a:e9:97:f9:7c:33:be:9f:78:95:1f:cd:37:27:9c:b5:a2:b0:
+         05:56:37:ec:70:8f:80:17:60:f6:f7:1b:85:c8:ca:4f:65:52:
+         ce:cd:23:61:2f:40:ee:3b:1e:f7:67:82:dd:03:89:8b:0b:23:
+         f6:82:fc:70:08:29:dd:01:ca:d6:c4:f9:28:46:51:2c:d5:38:
+         1b:60:84:17:22:6f:16:9b:cf:bc:f8:30:7e:ab:ef:ff:8e:21:
+         31:a1:7e:80:0f:5c:41:47:4e:3b:d6:57:7d:54:7b:f1:74:9a:
+         ea:4e:a7:fc
