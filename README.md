@@ -10,15 +10,15 @@ $ cat ../supercert.x509 | x509tojson.sh
 # Example Output
 ```
 {
-  "label": "*.google.at"
-  "date": "Sun Jul 12 20:06:08 CEST 2020"
+  "label": "*.google.at",
+  "date": "Sun Jul 12 21:04:42 CEST 2020",
   "subject": {
     "raw": "C = US, ST = California, L = Mountain View, O = Google LLC, CN = *.google.at",
     "common_name": "*.google.at",
     "country": "US",
     "organization": "Google LLC",
     "names": [
-      "DNS:*.google.at, DNS:google.at"
+       "*.google.at", "google.at"
     ]
   },
   "issuer": {
@@ -30,10 +30,11 @@ $ cat ../supercert.x509 | x509tojson.sh
   },
   "serial_number": "23:6e:43:6d:08:17:a9:8b:08:00:00:00:00:47:f0:50",
   "sans": [
-    "DNS:*.google.at, DNS:google.at"
+    "*.google.at", "google.at"
   ],
   "not_before": "Jun 17 14:32:13 2020 GMT",
   "not_after": "Sep  9 14:32:13 2020 GMT",
+ 11 # x509tojson
   "sigalg": "sha256WithRSAEncryption",
   "authority_key_id": "keyid:98:D1:F8:6E:10:EB:CF:9B:EC:60:9F:18:90:1B:A0:EB:7D:09:FD:2B",
   "subject_key_id": "ED:33:64:97:91:79:6A:9A:6A:AF:20:E7:B9:A5:69:9C:29:3E:2B:03"
