@@ -29,7 +29,7 @@ getCertIssuerURL() {
   echo $CERT | awk 'BEGIN{FS="CA Issuers - URI:"} NF==2{print $2}'
 }
 getCertDNS() {
-  echo $CERT | sed -n '/Subject Alternative Name:/{n;p;}' | xargs
+  echo $CERT | sed -n '/Subject Alternative Name:/{n;p;}' | xargs | sed "s/DNS://g" | sed "s/,//g"
 }
 getCertSerialNumber() {
   echo $CERT | sed -n '/Serial Number:/{n;p;}' | xargs
@@ -53,7 +53,9 @@ getOrganisation(){
 getCountry(){
     echo $1 | awk 'BEGIN{FS="(^| )C(| )="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
-
+getDNSArray(){
+    echo $1 | sed 's/ /\", \"/g' | sed 's/^/\"/' | sed 's/$/\"/'
+}
 
 read -r -d '' JSON << EOM
 {
@@ -65,7 +67,7 @@ read -r -d '' JSON << EOM
     "country": "$(getCountry $SUBJECT)",
     "organization": "$(getOrganisation $SUBJECT)",
     "names": [
-      "$(getCertDNS)"
+       $(getDNSArray $(getCertDNS))
     ]
   },
   "issuer": {
@@ -77,7 +79,7 @@ read -r -d '' JSON << EOM
   },
   "serial_number": "$(getCertSerialNumber)",
   "sans": [
-    "$(getCertDNS)"
+    $(getDNSArray $(getCertDNS))
   ],
   "not_before": "$(getCertNotBefore)",
   "not_after": "$(getCertNotAfter)",
