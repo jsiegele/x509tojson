@@ -45,13 +45,13 @@ SUBJECT=$(getCertSubject)
 ISSUER=$(getCertIssuer)
 
 getCommonName(){
-    echo $1 | awk 'BEGIN{FS="(^| )CN ="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )CN(| )="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 getOrganisation(){
-    echo $1 | awk 'BEGIN{FS="(^| )O ="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )O(| )="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 getCountry(){
-    echo $1 | awk 'BEGIN{FS="(^| )C ="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )C(| )="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 
 
