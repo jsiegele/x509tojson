@@ -3,8 +3,8 @@ IFS=''
 
 CERT=$(timeout 3s cat)
 # TODO: INPUT Validierung:
-#       Input überhaupt vorhanden?
-#       Input valides x509 oder gskit Format?
+#          Input überhaupt vorhanden?
+#          Input valides x509 Format?
 
 if [ -z "$CERT" ]; then
     echo "NO STDIN Input -> EXIT"
@@ -41,22 +41,21 @@ getCertSubjectKeyIdentifier() {
 getCertAuthorityKeyIdentifier() {
   echo $CERT | sed -n '/Authority Key Identifier:/{n;p;}' | xargs
 }
-
-SUBJECT=$(getCertSubject)
-ISSUER=$(getCertIssuer)
-
 getCommonName(){
-    echo $1 | awk 'BEGIN{FS="(^| )CN="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )CN( )*="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 getOrganisation(){
-    echo $1 | awk 'BEGIN{FS="(^| )O="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )O( )*="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 getCountry(){
-    echo $1 | awk 'BEGIN{FS="(^| )C="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
+    echo $1 | awk 'BEGIN{FS="(^| )C( )*="} NF==2{print $2}' | awk -F, '{print $1}'| xargs
 }
 getDNSArray(){
     echo $1 | sed 's/ /\", \"/g;s/^/\"/;s/$/\"/'
 }
+
+SUBJECT=$(getCertSubject)
+ISSUER=$(getCertIssuer)
 
 read -r -d '' JSON << EOM
 {
