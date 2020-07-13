@@ -1,10 +1,15 @@
 #!/bin/bash
 IFS=''
 
-CERT=$(cat)
+CERT=$(timeout 3s cat)
 # TODO: INPUT Validierung:
 #       Input überhaupt vorhanden?
 #       Input valides x509 oder gskit Format?
+
+if [ -z "$CERT" ]; then
+    echo "NO STDIN Input -> EXIT"
+    exit 12
+fi
 
 getCertSubject() {
   echo $CERT | awk 'BEGIN{FS="Subject: "} NF==2{print $2}'
