@@ -16,10 +16,10 @@ getCertIssuer() {
   echo $CERT | awk 'BEGIN{FS="Issuer: "} NF==2{print $2}'
 }
 getCertNotBefore() {
-  echo $CERT | awk 'BEGIN{FS="Not Before: "} NF==2{print $2}' | sed 's/Jan/1/g;s/Feb/2/g;s/Mar/3/g;s/Apr/4/g;s/May/5/g;s/Jun/6/g;s/Jul/7/g;s/Aug/8/g;s/Sep/9/g;s/Oct/10/g;s/Nev/11/g;s/Dec/12/g'
+  echo $CERT | awk 'BEGIN{FS="Not Before: "} NF==2{print $2}'
 }
 getCertNotAfter() {
-  echo $CERT | awk 'BEGIN{FS="Not After : "} NF==2{print $2}' | sed 's/Jan/1/g;s/Feb/2/g;s/Mar/3/g;s/Apr/4/g;s/May/5/g;s/Jun/6/g;s/Jul/7/g;s/Aug/8/g;s/Sep/9/g;s/Oct/10/g;s/Nov/11/g;s/Dec/12/g'
+  echo $CERT | awk 'BEGIN{FS="Not After : "} NF==2{print $2}'
 }
 getCertIssuerURL() {
   echo $CERT | awk 'BEGIN{FS="CA Issuers - URI:"} NF==2{print $2}'
